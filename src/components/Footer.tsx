@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, ExternalLink, ArrowUpRight, FileText, MapPin, Send } from 'lucide-react';
+import { Mail, FileText, MapPin, Send } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 
