@@ -209,76 +209,74 @@ const CV = () => {
 
           @page {
             size: A4;
-            margin: 0;
+            margin: 0mm;
           }
 
           @media print {
             body { 
-              background: white !important; 
-              color: black !important; 
+              background: #fff !important; 
+              color: #000 !important; 
               padding: 0 !important; 
               margin: 0 !important;
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
             }
             .no-print { display: none !important; }
             
             .cv-card { 
-              background: white !important; 
-              color: black !important; 
+              background: #fff !important; 
+              color: #000 !important; 
               border: none !important; 
               box-shadow: none !important; 
-              width: 100% !important; 
-              max-width: 100% !important;
+              width: 100vw !important; 
+              max-width: 100vw !important;
+              min-height: 100vh !important;
               border-radius: 0 !important;
               margin: 0 !important;
               padding: 0 !important;
               display: block !important;
+              position: absolute !important;
+              top: 0 !important;
+              left: 0 !important;
             }
 
             header { 
               background: #f9fafb !important; 
               border-bottom: 2px solid #000 !important; 
-              color: black !important; 
-              padding: 30px !important; 
-              -webkit-print-color-adjust: exact;
-              print-color-adjust: exact;
+              color: #000 !important; 
+              padding: 1cm 1.5cm !important; 
             }
 
             h2 { 
               color: #000 !important; 
               border-bottom: 1px solid #000 !important; 
-              padding-bottom: 5px !important;
-              margin-top: 20px !important;
+              padding-bottom: 2mm !important;
+              margin-top: 5mm !important;
             }
 
             section { page-break-inside: avoid; }
 
             .main-col { 
-              padding: 20px 30px !important; 
+              padding: 1cm 1.5cm !important; 
               border-right: 1px solid #eee !important; 
             }
             
             .sidebar-col { 
-              padding: 20px 30px !important; 
+              padding: 1cm 1.5cm !important; 
               background: #fff !important; 
             }
 
-            span, p, h4, h5 { color: black !important; }
-            b { color: black !important; font-weight: 700; }
+            span, p, h4, h5 { color: #000 !important; }
             
             .skill-tag {
-              background: #f0f0f0 !important;
-              border: 1px solid #ddd !important;
-              color: #333 !important;
+              background: #f3f4f6 !important;
+              border: 1px solid #e5e7eb !important;
+              color: #000 !important;
             }
 
             footer { 
-              padding: 15px !important; 
+              padding: 1cm !important; 
               border-top: 1px solid #eee !important; 
-            }
-
-            * { 
-              -webkit-print-color-adjust: exact !important; 
-              print-color-adjust: exact !important; 
             }
           }
 

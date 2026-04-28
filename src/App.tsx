@@ -9,8 +9,10 @@ import CV from './pages/CV';
 function App() {
   return (
     <>
-      <CursorTrail />
-      <BackgroundEffect />
+      <div className="no-print">
+        <CursorTrail />
+        <BackgroundEffect />
+      </div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
