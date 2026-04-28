@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg-black: #000000;
+  --bg-card: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1a1;
+  --accent-gold: #d4af37;
+  --accent-silver: #e5e4e2;
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none; /* Custom cursor trail will handle this */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-black);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+  cursor: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Outfit', sans-serif;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-luxury {
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(20px); /* Kunci dari tampilan mewah */
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.glass-card {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.btn-luxury {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.2rem;
+  background: white;
+  color: black;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.btn-luxury:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.section {
+  padding: 8rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Transitions */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
