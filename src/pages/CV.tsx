@@ -15,10 +15,10 @@ const CV = () => {
   ];
 
   return (
-    <div style={{ background: '#f3f4f6', minHeight: '100vh', color: '#111827', padding: '2rem 1rem', fontFamily: "'Inter', sans-serif" }}>
+    <div style={{ background: '#020617', minHeight: '100vh', color: '#fff', padding: '2rem 1rem', fontFamily: "'Inter', sans-serif" }}>
       {/* Navbar - Tersembunyi saat Cetak */}
-      <nav className="container no-print" style={{ position: 'relative', zIndex: 100, marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '900px', margin: '0 auto 2rem auto' }}>
-        <Link to="/" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#4b5563', textDecoration: 'none', fontWeight: 500, transition: 'all 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#111827'} onMouseOut={(e) => e.currentTarget.style.color = '#4b5563'}>
+      <nav className="container no-print" style={{ position: 'relative', zIndex: 100, marginBottom: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', maxWidth: '1000px', margin: '0 auto 2rem auto' }}>
+        <Link to="/" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#a1a1aa', textDecoration: 'none', fontWeight: 500, transition: 'all 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = '#a1a1aa'}>
           <ArrowLeft size={20} />
           <span>Kembali ke Portofolio</span>
         </Link>
@@ -27,20 +27,20 @@ const CV = () => {
             onClick={handlePrint} 
             style={{ 
               cursor: 'pointer', 
-              padding: '0.6rem 1.5rem', 
-              fontSize: '0.85rem', 
+              padding: '0.7rem 1.8rem', 
+              fontSize: '0.9rem', 
               border: 'none', 
-              borderRadius: '0.5rem', 
-              background: '#111827', 
-              color: '#fff',
+              borderRadius: '2rem', 
+              background: 'var(--accent-primary)', 
+              color: '#000',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.5rem',
-              fontWeight: 600,
-              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+              gap: '0.6rem',
+              fontWeight: 700,
+              boxShadow: '0 10px 20px -5px rgba(56, 189, 248, 0.4)'
             }}
           >
-            <Printer size={16} />
+            <Printer size={18} />
             Cetak CV
           </button>
         </div>
@@ -51,43 +51,44 @@ const CV = () => {
         animate={{ opacity: 1, y: 0 }}
         className="container cv-card"
         style={{ 
-          background: '#ffffff', 
-          borderRadius: '0', 
-          border: '1px solid #e5e7eb',
+          background: 'rgba(255, 255, 255, 0.02)', 
+          borderRadius: '2rem', 
+          border: '1px solid rgba(255, 255, 255, 0.05)',
           overflow: 'hidden',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
-          maxWidth: '900px',
+          boxShadow: '0 40px 100px -20px rgba(0, 0, 0, 0.6)',
+          maxWidth: '1000px',
           margin: '0 auto',
           position: 'relative',
-          color: '#111827'
+          color: '#fff',
+          backdropFilter: 'blur(10px)'
         }}
       >
         {/* Bagian Header */}
-        <header style={{ padding: '4rem 3rem', background: '#f9fafb', borderBottom: '2px solid #111827', position: 'relative', zIndex: 1 }}>
+        <header style={{ padding: '4rem 3.5rem', background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%)', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', position: 'relative', zIndex: 1 }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '2rem', alignItems: 'flex-end' }}>
             <div>
-              <div style={{ background: '#111827', color: 'white', padding: '0.3rem 0.8rem', borderRadius: '0.2rem', fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '2px', display: 'inline-block', marginBottom: '1rem' }}>
+              <div style={{ background: 'var(--accent-primary)', color: '#000', padding: '0.4rem 1.2rem', borderRadius: '2rem', fontSize: '0.7rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '2px', display: 'inline-block', marginBottom: '1.5rem' }}>
                 Siap Bekerja
               </div>
-              <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 3rem)', fontWeight: 800, margin: 0, fontFamily: 'Outfit', lineHeight: 1, color: '#111827' }}>
-                Miftah <span style={{ color: '#d4af37' }}>Alfa Reza</span>
+              <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 3.5rem)', fontWeight: 800, margin: 0, fontFamily: 'Outfit', lineHeight: 1 }}>
+                Miftah <span className="text-gradient-primary">Alfa Reza</span>
               </h1>
-              <p style={{ fontSize: '1.1rem', color: '#4b5563', marginTop: '1rem', fontWeight: 400, maxWidth: '550px' }}>
-                Full-Stack Developer spesialis dalam membangun <span style={{ color: '#111827', fontWeight: 600 }}>arsitektur performa tinggi</span> and <span style={{ color: '#111827', fontWeight: 600 }}>pengalaman pengguna premium</span>.
+              <p style={{ fontSize: '1.2rem', color: '#a1a1aa', marginTop: '1.2rem', fontWeight: 400, maxWidth: '600px', lineHeight: 1.6 }}>
+                Full-Stack Developer spesialis dalam membangun <span style={{ color: '#fff' }}>arsitektur performa tinggi</span> dan <span style={{ color: '#fff' }}>pengalaman pengguna premium</span>.
               </p>
             </div>
             
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.8rem', fontSize: '0.9rem', color: '#4b5563', borderLeft: '2px solid #d4af37', paddingLeft: '1.5rem' }}>
-              <a href="mailto:miftah@example.com" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'inherit', textDecoration: 'none' }}>
-                <Mail size={16} color="#d4af37" /> miftah@example.com
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem', fontSize: '0.95rem', color: '#a1a1aa', borderLeft: '2px solid var(--accent-primary)', paddingLeft: '2rem' }}>
+              <a href="mailto:miftah@example.com" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', color: 'inherit', textDecoration: 'none' }}>
+                <Mail size={18} color="var(--accent-primary)" /> miftah@example.com
               </a>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <MapPin size={16} color="#d4af37" /> Indonesia
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                <MapPin size={18} color="var(--accent-primary)" /> Indonesia
               </div>
-              <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
-                <FaGithub size={18} color="#111827" />
-                <FaLinkedin size={18} color="#111827" />
-                <FaInstagram size={18} color="#111827" />
+              <div style={{ display: 'flex', gap: '1.2rem', marginTop: '0.5rem' }}>
+                <FaGithub size={20} color="#fff" />
+                <FaLinkedin size={20} color="#fff" />
+                <FaInstagram size={20} color="#fff" />
               </div>
             </div>
           </div>
@@ -96,13 +97,13 @@ const CV = () => {
         <div className="grid-container" style={{ position: 'relative', zIndex: 1 }}>
           
           {/* Kolom Konten Utama */}
-          <div className="main-col" style={{ padding: '3rem', borderRight: '1px solid #e5e7eb' }}>
-            <section style={{ marginBottom: '3rem' }}>
-              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '1px', color: '#111827', marginBottom: '1.5rem', borderBottom: '2px solid #f3f4f6', paddingBottom: '0.5rem' }}>
-                <Briefcase size={18} color="#d4af37" />
+          <div className="main-col" style={{ padding: '3.5rem', borderRight: '1px solid rgba(255, 255, 255, 0.05)' }}>
+            <section style={{ marginBottom: '4rem' }}>
+              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-primary)', marginBottom: '2rem' }}>
+                <Briefcase size={22} />
                 Profil Profesional
               </h2>
-              <p style={{ lineHeight: 1.7, color: '#374151', fontSize: '1rem' }}>
+              <p style={{ lineHeight: 1.8, color: '#d1d5db', fontSize: '1.05rem' }}>
                 Full-Stack Developer yang berdedikasi dengan keahlian mendalam dalam ekosistem web modern. 
                 Memiliki kemampuan terbukti dalam merancang dan mengimplementasikan sistem backend yang kompleks menggunakan <b>Laravel & NestJS</b>, 
                 yang terintegrasi secara mulus dengan antarmuka <b>React</b> berperforma tinggi. 
@@ -111,20 +112,20 @@ const CV = () => {
             </section>
 
             <section>
-              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '1px', color: '#111827', marginBottom: '1.5rem', borderBottom: '2px solid #f3f4f6', paddingBottom: '0.5rem' }}>
-                <Award size={18} color="#d4af37" />
+              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-primary)', marginBottom: '2rem' }}>
+                <Award size={22} />
                 Proyek Unggulan
               </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
                 {[
                   { name: 'Luxury Architecture Portfolio', tech: 'React / Framer Motion', desc: 'Showcase digital kelas atas dengan efek glassmorphism tingkat lanjut dan animasi berbasis state.' },
                   { name: 'Enterprise API Gateway', tech: 'Laravel / PostgreSQL', desc: 'Arsitektur REST API yang aman dan skalabel dengan analitik real-time dan pembatasan laju (rate-limiting).' },
                   { name: 'Task Flow Engine', tech: 'NestJS / WebSockets', desc: 'Platform kolaborasi real-time dengan manajemen state terdistribusi.' }
                 ].map((project, i) => (
-                  <div key={i}>
-                    <h4 style={{ margin: 0, fontSize: '1rem', color: '#111827', fontWeight: 700 }}>{project.name}</h4>
-                    <p style={{ margin: '0.2rem 0', fontSize: '0.8rem', color: '#d4af37', fontWeight: 600 }}>{project.tech}</p>
-                    <p style={{ margin: '0.4rem 0', fontSize: '0.9rem', color: '#4b5563', lineHeight: 1.5 }}>{project.desc}</p>
+                  <div key={i} style={{ paddingLeft: '1.5rem', borderLeft: '2px solid rgba(56, 189, 248, 0.2)' }}>
+                    <h4 style={{ margin: 0, fontSize: '1.1rem', color: '#fff', fontWeight: 700 }}>{project.name}</h4>
+                    <p style={{ margin: '0.3rem 0', fontSize: '0.85rem', color: 'var(--accent-primary)', fontWeight: 600 }}>{project.tech}</p>
+                    <p style={{ margin: '0.5rem 0', fontSize: '0.95rem', color: '#a1a1aa', lineHeight: 1.6 }}>{project.desc}</p>
                   </div>
                 ))}
               </div>
@@ -132,21 +133,21 @@ const CV = () => {
           </div>
 
           {/* Kolom Sidebar */}
-          <div className="sidebar-col" style={{ padding: '3rem', background: '#fcfcfc' }}>
-            <section style={{ marginBottom: '3rem' }}>
-              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px', color: '#111827', marginBottom: '1.5rem', borderBottom: '2px solid #f3f4f6', paddingBottom: '0.5rem' }}>
-                <CheckCircle2 size={18} color="#d4af37" />
+          <div className="sidebar-col" style={{ padding: '3.5rem', background: 'rgba(255, 255, 255, 0.01)' }}>
+            <section style={{ marginBottom: '4rem' }}>
+              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-primary)', marginBottom: '2rem' }}>
+                <CheckCircle2 size={22} />
                 Keahlian Teknis
               </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 {skillGroups.map((group) => (
                   <div key={group.name}>
-                    <h5 style={{ margin: '0 0 0.8rem 0', fontSize: '0.85rem', color: '#111827', fontWeight: 700 }}>
+                    <h5 style={{ margin: '0 0 1rem 0', fontSize: '0.9rem', color: '#fff', fontWeight: 700 }}>
                       {group.name}
                     </h5>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
                       {group.items.map(skill => (
-                        <span key={skill} className="skill-tag" style={{ padding: '0.3rem 0.6rem', background: '#f3f4f6', borderRadius: '0.2rem', fontSize: '0.75rem', border: '1px solid #e5e7eb', color: '#374151' }}>
+                        <span key={skill} className="skill-tag" style={{ padding: '0.4rem 0.8rem', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '0.5rem', fontSize: '0.8rem', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#e5e7eb' }}>
                           {skill}
                         </span>
                       ))}
@@ -156,32 +157,32 @@ const CV = () => {
               </div>
             </section>
 
-            <section style={{ marginBottom: '3rem' }}>
-              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px', color: '#111827', marginBottom: '1.5rem', borderBottom: '2px solid #f3f4f6', paddingBottom: '0.5rem' }}>
-                <Globe size={18} color="#d4af37" />
+            <section style={{ marginBottom: '4rem' }}>
+              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-primary)', marginBottom: '2rem' }}>
+                <Globe size={22} />
                 Bahasa
               </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.95rem' }}>
                   <span>Bahasa Indonesia</span>
-                  <span style={{ color: '#d4af37', fontWeight: 600 }}>Asli</span>
+                  <span style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>Asli</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.95rem' }}>
                   <span>Bahasa Inggris</span>
-                  <span style={{ color: '#d4af37', fontWeight: 600 }}>Profesional</span>
+                  <span style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>Profesional</span>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px', color: '#111827', marginBottom: '1.5rem', borderBottom: '2px solid #f3f4f6', paddingBottom: '0.5rem' }}>
-                <GraduationCap size={18} color="#d4af37" />
+              <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '1.1rem', textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent-primary)', marginBottom: '2rem' }}>
+                <GraduationCap size={22} />
                 Pendidikan
               </h2>
-              <div>
-                <h4 style={{ margin: 0, fontSize: '0.95rem', color: '#111827', fontWeight: 700 }}>SMK Nurul Islam Affandiyah</h4>
-                <p style={{ margin: '0.2rem 0', fontSize: '0.85rem', color: '#4b5563' }}>Rekayasa Perangkat Lunak</p>
-                <p style={{ margin: '0.2rem 0', fontSize: '0.8rem', color: '#d4af37', fontWeight: 600 }}>2023 — 2026</p>
+              <div style={{ paddingLeft: '1.2rem', borderLeft: '2px solid var(--accent-primary)' }}>
+                <h4 style={{ margin: 0, fontSize: '1.1rem', color: '#fff', fontWeight: 700 }}>SMK Nurul Islam Affandiyah</h4>
+                <p style={{ margin: '0.3rem 0', fontSize: '0.95rem', color: '#a1a1aa' }}>Rekayasa Perangkat Lunak</p>
+                <p style={{ margin: '0.3rem 0', fontSize: '0.85rem', color: 'var(--accent-primary)', fontWeight: 600 }}>2023 — 2026</p>
               </div>
             </section>
           </div>
@@ -189,8 +190,8 @@ const CV = () => {
         </div>
 
         {/* Footer di CV */}
-        <footer style={{ padding: '2rem 3rem', borderTop: '1px solid #f3f4f6', textAlign: 'center' }}>
-          <p style={{ color: '#9ca3af', fontSize: '0.7rem', margin: 0 }}>
+        <footer style={{ padding: '2.5rem 3.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.05)', textAlign: 'center' }}>
+          <p style={{ color: '#555', fontSize: '0.8rem', margin: 0 }}>
             Dibuat melalui Portofolio Digital • Miftah Alfa Reza • {new Date().getFullYear()}
           </p>
         </footer>
@@ -202,9 +203,10 @@ const CV = () => {
           
           @media screen and (max-width: 768px) {
             .cv-card { border-radius: 0 !important; }
-            header { padding: 2rem 1.5rem !important; }
+            header { padding: 2.5rem 1.5rem !important; }
             .grid-container { grid-template-columns: 1fr !important; }
-            .main-col { border-right: none !important; border-bottom: 1px solid #e5e7eb !important; }
+            .main-col { border-right: none !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; }
+            .sidebar-col { padding: 2.5rem 1.5rem !important; }
           }
 
           @page {
@@ -238,6 +240,7 @@ const CV = () => {
               position: absolute !important;
               top: 0 !important;
               left: 0 !important;
+              backdrop-filter: none !important;
             }
 
             header { 
@@ -245,6 +248,12 @@ const CV = () => {
               border-bottom: 2px solid #000 !important; 
               color: #000 !important; 
               padding: 1cm 1.5cm !important; 
+            }
+
+            .text-gradient-primary {
+              background: none !important;
+              -webkit-text-fill-color: #000 !important;
+              color: #000 !important;
             }
 
             h2 { 
@@ -267,6 +276,7 @@ const CV = () => {
             }
 
             span, p, h4, h5 { color: #000 !important; }
+            b { color: #000 !important; font-weight: 700; }
             
             .skill-tag {
               background: #f3f4f6 !important;
@@ -282,7 +292,7 @@ const CV = () => {
 
           .grid-container {
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
+            grid-template-columns: 1.6fr 1fr;
           }
         `}
       </style>

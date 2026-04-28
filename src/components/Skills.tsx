@@ -21,7 +21,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem' }}>
-            Keahlian <span className="text-gradient-gold">Teknis</span>
+            Keahlian <span className="text-gradient-primary">Teknis</span>
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>

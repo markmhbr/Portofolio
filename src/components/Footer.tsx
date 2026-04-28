@@ -22,19 +22,19 @@ const Footer = () => {
           style={{ textAlign: 'center', marginBottom: '6rem' }}
         >
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 800, marginBottom: '1.5rem', fontFamily: 'Outfit' }}>
-            Let's create <span className="text-gradient-gold">something extraordinary.</span>
+            Mari ciptakan <span className="text-gradient-primary">sesuatu yang luar biasa.</span>
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
-            I'm currently available for freelance projects and full-time opportunities. Let's build the future together.
+            Saya saat ini tersedia untuk proyek lepas dan peluang penuh waktu. Mari bangun masa depan bersama.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="mailto:miftah@example.com" className="btn-luxury" style={{ textDecoration: 'none' }}>
+            <a href="mailto:miftah@example.com" className="btn-luxury" style={{ textDecoration: 'none', background: 'var(--accent-primary)', color: 'black' }}>
               <Send size={18} />
-              Get In Touch
+              Hubungi Saya
             </a>
             <Link to="/cv" className="btn-outline" style={{ textDecoration: 'none' }}>
               <FileText size={18} />
-              View My CV
+              Lihat CV Saya
             </Link>
           </div>
         </motion.div>
@@ -45,27 +45,27 @@ const Footer = () => {
           <div style={{ flex: 1.5 }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1.2rem', fontFamily: 'Outfit' }}>Miftah Alfa Reza</h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-              Digital Architect & Full-Stack Developer focusing on high-performance web applications and elegant designs.
+              Digital Architect & Full-Stack Developer yang fokus pada aplikasi web berperforma tinggi dan desain elegan.
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#10b981', fontSize: '0.85rem', fontWeight: 500 }}>
-              <div style={{ width: '8px', height: '8px', background: '#10b981', borderRadius: '50%', boxShadow: '0 0 10px #10b981' }}></div>
-              Available for new projects
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--accent-primary)', fontSize: '0.85rem', fontWeight: 500 }}>
+              <div style={{ width: '8px', height: '8px', background: 'var(--accent-primary)', borderRadius: '50%', boxShadow: '0 0 10px var(--accent-primary)' }}></div>
+              Tersedia untuk proyek baru
             </div>
           </div>
 
           {/* Nav Col */}
           <div>
-            <h4 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Navigation</h4>
+            <h4 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Navigasi</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {['Home', 'About', 'Skills', 'Projects'].map((item) => (
                 <li key={item} style={{ marginBottom: '0.8rem' }}>
-                  <a href={`#${item.toLowerCase()}`} style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.3s', fontSize: '0.95rem' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
-                    {item}
+                  <a href={`#${item.toLowerCase()}`} style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.3s', fontSize: '0.95rem' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
+                    {item === 'About' ? 'Tentang' : item === 'Skills' ? 'Keahlian' : item === 'Projects' ? 'Proyek' : item}
                   </a>
                 </li>
               ))}
               <li style={{ marginBottom: '0.8rem' }}>
-                <Link to="/cv" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.3s', fontSize: '0.95rem' }} onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>CV / Resume</Link>
+                <Link to="/cv" style={{ color: 'var(--text-secondary)', textDecoration: 'none', transition: 'color 0.3s', fontSize: '0.95rem' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>CV / Resume</Link>
               </li>
             </ul>
           </div>

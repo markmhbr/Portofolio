@@ -1,22 +1,17 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Code } from 'lucide-react';
+import dapurGiungImg from '../assets/images/dapurgiung.png';
+import spmbImg from '../assets/images/spmb.png';
+
 
 const projectsData = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Aplikasi e-commerce lengkap dengan fitur keranjang, checkout, dan integrasi payment gateway. Dibangun menggunakan Laravel dan Vue.js.',
-    tech: ['Laravel', 'Vue.js', 'MySQL'],
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop',
-    repo: 'https://github.com/markmhbr', // Ganti dengan link githubmu
-    demo: 'https://smakniscjr.sch.id' // Ganti dengan link demo
-  },
-  {
-    title: 'Dashboard Analitik',
-    description: 'Dashboard interaktif untuk memonitor data statistik perusahaan secara real-time. Menggunakan React dan Nest.js.',
-    tech: ['React', 'Nest.js', 'PostgreSQL'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    repo: 'https://github.com/markmhbr/dashboard',
-    demo: 'https://demo-dashboard.com'
+    title: 'Dapur Giung',
+    description: 'Platform katalog menu digital untuk Dapur Giung. Memudahkan pelanggan melihat daftar hidangan, deskripsi, dan harga secara online dengan tampilan yang responsif.',
+    tech: ['Laravel', 'Boostrap', 'MySQL'],
+    image: dapurGiungImg,
+    repo: 'https://github.com/markmhbr',
+    demo: 'https://dapurgiung.com'
   },
   {
     title: 'Aplikasi Manajemen Sekolah',
@@ -24,6 +19,14 @@ const projectsData = [
     tech: ['Laravel', 'Bootstrap', 'MySQL'],
     image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&h=400&fit=crop',
     repo: 'https://github.com/markmhbr/simak',
+    demo: 'https://smakniscjr.sch.id'
+  },
+  {
+    title: 'PPDB Online',
+    description: 'Sistem pendaftaran mahasiswa baru berbasis web yang dirancang untuk menyederhanakan proses registrasi calon mahasiswa baru. Sistem ini mencakup fitur formulir pendaftaran online, validasi data, unggah dokumen, hingga dashboard administrasi untuk verifikasi dan rekapitulasi data pendaftar.',
+    tech: ['Laravel', 'Tailwind CSS', 'MySQL'],
+    image: spmbImg,
+    repo: 'https://github.com/markmhbr',
     demo: 'https://smakniscjr.sch.id'
   }
 ];
@@ -39,7 +42,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem' }}>
-            Proyek <span className="text-gradient-gold">Terbaik</span>
+            Proyek <span className="text-gradient-primary">Terbaik</span>
           </h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
@@ -73,7 +76,7 @@ const Projects = () => {
                     <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn-outline">
                       <Code size={16} /> Kode
                     </a>
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-luxury">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn-luxury" style={{ background: 'var(--accent-primary)', color: 'black' }}>
                       <ExternalLink size={16} /> Demo
                     </a>
                   </div>
